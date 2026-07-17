@@ -153,7 +153,7 @@ Happy Birthday once again, Divya. ❤️`,
   gallery: [
     {
       url: "/pictures/DVVL0625.JPG",
-      caption: "You know how much I expressed for this image. That haircut? I kept this as my WhatsApp wallpaper. 🥺"
+      caption: "You know how much I react when I see this image and expressed for it. That haircut One of my favorites! I kept this as my WhatsApp wallpaper. 🥺"
     },
     {
       url: "/pictures/FKIG4586.JPG",
@@ -165,7 +165,7 @@ Happy Birthday once again, Divya. ❤️`,
     },
     {
       url: "/pictures/IMG_E3190.JPG",
-      caption: "Black sari suits you like it suits nobody else. Like it was literally made for you, Divya. 🖤✨"
+      caption: "Black saree suits you like it suits nobody else. Like it was literally made for you, Divya. 🖤✨"
     },
     {
       url: "/pictures/IMG_E3191.JPG",
@@ -173,7 +173,7 @@ Happy Birthday once again, Divya. ❤️`,
     },
     {
       url: "/pictures/IMG_E3192.JPG",
-      caption: "The way you look just takes my heart away. And the way you flip your hair in that video? So cool. 💫"
+      caption: "The way you look just takes my heart away. And the way you flip your hair in that video! So cool. 💫"
     },
     {
       url: "/pictures/IMG_E3193.JPG",
@@ -181,11 +181,11 @@ Happy Birthday once again, Divya. ❤️`,
     },
     {
       url: "/pictures/IMG_E3194.JPG",
-      caption: "We had just started talking and you suddenly dropped this sari picture. I scroll through all your pictures one by one, every single day. 🌹"
+      caption: "We had just started talking and you suddenly dropped this saree picture. I scroll through all your pictures one by one, every single day. 🌹"
     },
     {
       url: "/pictures/IMG_E3195.JPG",
-      caption: "I thought bangs looked good on people, then I saw this. Now I know every hairstyle is literally made for you. 😍"
+      caption: "I thought bangs looked good on you!, then I saw this. Now I know every hairstyle is literally made for you. 😍"
     },
     {
       url: "/pictures/IMG_E3196.JPG",

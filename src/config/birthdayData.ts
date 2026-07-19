@@ -180,7 +180,7 @@ Happy Birthday once again, Divya. ❤️`,
       caption: "This video was so adorable — you look like a real life Barbie doll. I am not even kidding. 🎀"
     },//6
     {
-      url: "/videos/6th.MOV",
+      url: "/videos/6th.mov",
       caption: "The way you look just takes my heart away. And the way you flip your hair in that video! So cool. 💫"
     },//7
     {

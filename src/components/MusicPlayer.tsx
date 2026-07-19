@@ -36,6 +36,13 @@ export default function MusicPlayer() {
     audioRef.current = audio;
     trackIndexRef.current = 0;
 
+    audio.play().then(() => {
+      setIsPlaying(true);
+      isPlayingRef.current = true;
+    }).catch((err) => {
+      console.log("Auto-play blocked by browser:", err);
+    });
+
     const playNextTrack = () => {
       if (!audioRef.current) return;
       trackIndexRef.current = (trackIndexRef.current + 1) % playlist.length;

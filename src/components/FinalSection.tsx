@@ -168,7 +168,7 @@ export default function FinalSection() {
 
       {/* Footer credits */}
       <div className="absolute bottom-6 font-sans text-[10px] text-zinc-400 dark:text-zinc-650 tracking-widest uppercase">
-        Designed for {birthdayData.girlfriendName}
+        Special gift for special person, {birthdayData.girlfriendName}
       </div>
     </section>
   );

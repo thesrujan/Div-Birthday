@@ -8,6 +8,8 @@ import { birthdayData } from "@/config/birthdayData";
 export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
+  const isVideoUrl = (url: string) => /\.(mp4|mov|webm|ogg|m4v)$/i.test(url);
+
   // Close lightbox on Escape key press
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -74,16 +76,28 @@ export default function Gallery() {
               onClick={() => setSelectedIndex(index)}
               className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl border border-white/50 dark:border-zinc-800/50 cursor-pointer bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm transition-all duration-300"
             >
-              {/* Photo */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={photo.url}
-                alt={photo.caption}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              
-              {/* Hover Overlay */}
+              {/* Media Preview */}
+          {isVideoUrl(photo.url) ? (
+            <video
+              src={photo.url}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              muted
+              loop
+              playsInline
+              autoPlay
+              controls={false}
+            />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={photo.url}
+              alt={photo.caption}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+            />
+          )}
+          
+          {/* Hover Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
                 <p className="font-sans text-xs font-light tracking-wide uppercase opacity-75">Photo #{index + 1}</p>
                 <p className="font-serif text-sm font-medium mt-1 line-clamp-2">{photo.caption}</p>
@@ -133,13 +147,24 @@ export default function Gallery() {
               className="relative max-w-4xl max-h-[80vh] flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Active Image */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={birthdayData.gallery[selectedIndex].url}
-                alt={birthdayData.gallery[selectedIndex].caption}
-                className="max-w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl border border-white/10"
-              />
+              {/* Active Media */}
+              {isVideoUrl(birthdayData.gallery[selectedIndex].url) ? (
+                <video
+                  src={birthdayData.gallery[selectedIndex].url}
+                  controls
+                  autoPlay
+                  muted
+                  playsInline
+                  className="max-w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+                />
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={birthdayData.gallery[selectedIndex].url}
+                  alt={birthdayData.gallery[selectedIndex].caption}
+                  className="max-w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+                />
+              )}
 
               {/* Caption */}
               <div className="text-center mt-6 max-w-lg">

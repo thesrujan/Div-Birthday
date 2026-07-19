@@ -187,13 +187,13 @@ Happy Birthday once again, Divya. ❤️`,
       url: "/videos/7th.mp4",
       caption: "You are just adorable. Glamorous. 🌸 There is no other word for it."
     },
-    {
-      url: "/pictures/IMG_E3194.JPG",
-      caption: "We had just started talking and you suddenly dropped this saree picture. I scroll through all your pictures one by one, every single day. 🌹"
-    },
     {//9
       url: "/videos/_divya.277-20260719-0001.mp4",
       caption: "I thought bangs looked good on you!, then I saw this. Now I know every hairstyle is literally made for you. 😍"
+    },
+    {
+      url: "/pictures/IMG_E3194.JPG",
+      caption: "We had just started talking and you suddenly dropped this saree picture. I scroll through all your pictures one by one, every single day. 🌹"
     },
     {
       url: "/pictures/IMG_E3196.JPG",

@@ -192,7 +192,7 @@ Happy Birthday once again, Divya. ❤️`,
       caption: "We had just started talking and you suddenly dropped this saree picture. I scroll through all your pictures one by one, every single day. 🌹"
     },
     {//9
-      url: "/videos/videos/_divya.277-20260719-0001.mp4",
+      url: "/videos/_divya.277-20260719-0001.mp4",
       caption: "I thought bangs looked good on you!, then I saw this. Now I know every hairstyle is literally made for you. 😍"
     },
     {

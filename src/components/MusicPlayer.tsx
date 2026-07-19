@@ -1,41 +1,74 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Volume2, VolumeX, Music } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { birthdayData } from "@/config/birthdayData";
+
+function shuffleArray<T>(items: T[]) {
+  const array = [...items];
+  for (let i = array.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const trackIndexRef = useRef(0);
+  const isPlayingRef = useRef(false);
+
+  const playlist = useMemo(() => {
+    return shuffleArray(birthdayData.musicFiles).map((filename) => {
+      return `/music/${encodeURIComponent(filename)}`;
+    });
+  }, []);
 
   useEffect(() => {
-    // Create audio element
-    audioRef.current = new Audio(birthdayData.musicUrl);
-    audioRef.current.loop = true;
-    audioRef.current.volume = 0.4; // Soft background level
+    if (playlist.length === 0) return;
 
-    // Clean up on unmount
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
+    const audio = new Audio(playlist[0]);
+    audio.loop = false;
+    audio.volume = 0.4; // Soft background level
+    audioRef.current = audio;
+    trackIndexRef.current = 0;
+
+    const playNextTrack = () => {
+      if (!audioRef.current) return;
+      trackIndexRef.current = (trackIndexRef.current + 1) % playlist.length;
+      audioRef.current.src = playlist[trackIndexRef.current];
+      if (isPlayingRef.current) {
+        audioRef.current.play().catch((err) => {
+          console.log("Audio play blocked by browser:", err);
+        });
       }
     };
-  }, []);
+
+    audio.addEventListener("ended", playNextTrack);
+
+    return () => {
+      audio.removeEventListener("ended", playNextTrack);
+      audio.pause();
+      audioRef.current = null;
+    };
+  }, [playlist]);
 
   const togglePlay = () => {
     if (!audioRef.current) return;
-    
-    if (isPlaying) {
+
+    if (isPlayingRef.current) {
       audioRef.current.pause();
       setIsPlaying(false);
+      isPlayingRef.current = false;
     } else {
       audioRef.current.play().catch((err) => {
         console.log("Audio play blocked by browser:", err);
       });
       setIsPlaying(true);
+      isPlayingRef.current = true;
       setShowTooltip(false);
     }
   };

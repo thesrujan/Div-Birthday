@@ -19,7 +19,7 @@ export interface BirthdayConfig {
   datingStartDate: string; // Used as connection start date
   birthMonth: number;      // Month of her birthday
   birthDay: number;        // Day of her birthday
-  musicUrl: string;        // URL of background music
+  musicFiles: string[];    // Local music files served from /music
   loveLetter: string;      // The main special birthday note
   reasons: string[];       // 40 reasons she is awesome / appreciated
   timeline: TimelineEvent[];
@@ -35,8 +35,17 @@ export const birthdayData: BirthdayConfig = {
   birthMonth: 7,                  // July
   birthDay: 27,                  // 27th
   
-  // High-quality royalty-free emotional piano music
-  musicUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", 
+  musicFiles: [
+    "WhatsApp Audio 2026-07-18 at 4.35.12 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.35.55 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.37.35 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.38.02 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.38.38 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.39.07 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.40.21 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.42.22 PM.mpeg",
+    "WhatsApp Audio 2026-07-18 at 4.44.30 PM.mpeg",
+  ],
   
   loveLetter: `Dearest Divya,
 

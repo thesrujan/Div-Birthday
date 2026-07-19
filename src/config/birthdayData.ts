@@ -175,8 +175,8 @@ Happy Birthday once again, Divya. ❤️`,
       url: "/pictures/IMG_E3190.JPG",
       caption: "Black saree suits you like it suits nobody else. Like it was literally made for you, Divya. 🖤✨"
     },
-    {
-      url: "/pictures/IMG_E3191.JPG",
+    {//5
+      url: "/videos/_divya.277-20260719-0002.mp4",
       caption: "This video was so adorable — you look like a real life Barbie doll. I am not even kidding. 🎀"
     },//6
     {
@@ -191,8 +191,8 @@ Happy Birthday once again, Divya. ❤️`,
       url: "/pictures/IMG_E3194.JPG",
       caption: "We had just started talking and you suddenly dropped this saree picture. I scroll through all your pictures one by one, every single day. 🌹"
     },
-    {
-      url: "/pictures/IMG_E3195.JPG",
+    {//9
+      url: "/videos/videos/_divya.277-20260719-0001.mp4",
       caption: "I thought bangs looked good on you!, then I saw this. Now I know every hairstyle is literally made for you. 😍"
     },
     {

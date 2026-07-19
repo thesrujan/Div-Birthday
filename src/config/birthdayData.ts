@@ -44,7 +44,6 @@ export const birthdayData: BirthdayConfig = {
     "WhatsApp Audio 2026-07-18 at 4.39.07 PM.mpeg",
     "WhatsApp Audio 2026-07-18 at 4.40.21 PM.mpeg",
     "WhatsApp Audio 2026-07-18 at 4.42.22 PM.mpeg",
-    "WhatsApp Audio 2026-07-18 at 4.44.30 PM.mpeg",
   ],
   
   loveLetter: `Dearest Divya,

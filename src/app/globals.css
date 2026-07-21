@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins), sans-serif;
   --font-serif: var(--font-playfair), serif;
+  --font-script: var(--font-great-vibes), cursive;
 }
 
 .dark {

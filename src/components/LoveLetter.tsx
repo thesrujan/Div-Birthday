@@ -56,7 +56,7 @@ export default function LoveLetter() {
   }, [isOpen]);
 
   return (
-    <section className="relative min-h-screen py-24 px-4 flex flex-col items-center justify-center bg-gradient-to-tr from-[#FFFDF8] via-[#FFF9F2] to-[#FFF5ED] dark:from-[#1E110B] dark:via-[#160B05] dark:to-[#0D0502] overflow-hidden">
+    <section className="relative min-h-screen py-12 px-4 flex flex-col items-center justify-center bg-gradient-to-tr from-[#FFFDF8] via-[#FFF9F2] to-[#FFF5ED] dark:from-[#1E110B] dark:via-[#160B05] dark:to-[#0D0502] overflow-hidden -mt-16 md:-mt-20 pt-28 md:pt-32">
       
       
       {/* Decorative corner borders */}
@@ -72,18 +72,18 @@ export default function LoveLetter() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-6"
         >
           <span className="font-sans text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-50 dark:bg-amber-950/30 px-3 py-1.5 rounded-full">
             Birthday Note
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold mt-4 text-zinc-950 dark:text-white">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mt-3 text-zinc-950 dark:text-white">
             A Special Note For You
           </h2>
         </motion.div>
 
         {/* Envelope Container */}
-        <div className="relative w-full max-w-lg flex flex-col items-center justify-center min-h-[400px]">
+        <div className="relative w-full max-w-2xl flex flex-col items-center justify-center min-h-[450px]">
           
           <AnimatePresence mode="wait">
             {!isOpen ? (
@@ -95,7 +95,7 @@ export default function LoveLetter() {
                 exit={{ opacity: 0, y: -20, scale: 0.95 }}
                 transition={{ duration: 0.5 }}
                 onClick={handleOpenLetter}
-                className="w-full h-[350px] md:h-[400px] bg-[#FFFBF7] dark:bg-zinc-900 border-2 border-amber-200 dark:border-zinc-800 shadow-2xl rounded-3xl cursor-pointer flex flex-col items-center justify-center p-6 text-center select-none group border-dashed relative overflow-hidden"
+                className="w-full h-[320px] md:h-[400px] bg-[#FFFBF7] dark:bg-zinc-900 border-2 border-amber-200 dark:border-zinc-800 shadow-2xl rounded-3xl cursor-pointer flex flex-col items-center justify-center p-6 text-center select-none group border-dashed relative overflow-hidden"
               >
                 {/* Envelope Flap Mockup */}
                 <div className="absolute top-0 inset-x-0 h-1/2 border-b-2 border-amber-100 dark:border-zinc-800/40 bg-[#FFFEFA] dark:bg-zinc-800/20 rounded-t-3xl clip-path-flap" />
@@ -122,16 +122,16 @@ export default function LoveLetter() {
                 initial={{ opacity: 0, y: 50, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
-                className="w-full bg-[#FFFEFC] dark:bg-zinc-900 shadow-2xl rounded-3xl p-8 border border-amber-100 dark:border-zinc-800 flex flex-col relative min-h-[450px]"
+                className="w-full bg-[#FFFEFC] dark:bg-zinc-900 shadow-2xl rounded-3xl p-6 md:p-8 border border-amber-100 dark:border-zinc-800 flex flex-col relative h-[75vh] max-h-[700px] min-h-[400px]"
               >
                 {/* Corner details */}
-                <div className="absolute top-4 left-4 text-amber-300 dark:text-amber-900/50">✨</div>
-                <div className="absolute top-4 right-4 text-amber-300 dark:text-amber-900/50">✨</div>
-                <div className="absolute bottom-4 left-4 text-amber-300 dark:text-amber-900/50">✨</div>
-                <div className="absolute bottom-4 right-4 text-amber-300 dark:text-amber-900/50">✨</div>
+                <div className="absolute top-3 left-3 text-amber-300 dark:text-amber-900/50 text-sm">✨</div>
+                <div className="absolute top-3 right-3 text-amber-300 dark:text-amber-900/50 text-sm">✨</div>
+                <div className="absolute bottom-3 left-3 text-amber-300 dark:text-amber-900/50 text-sm">✨</div>
+                <div className="absolute bottom-3 right-3 text-amber-300 dark:text-amber-900/50 text-sm">✨</div>
 
                 {/* Contents */}
-                <div className="flex-1 font-serif text-md md:text-lg leading-relaxed text-zinc-800 dark:text-zinc-200 whitespace-pre-wrap font-medium tracking-wide italic max-h-[50vh] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-amber-200 dark:scrollbar-thumb-zinc-700">
+                <div className="flex-1 font-serif text-base md:text-lg leading-relaxed text-zinc-800 dark:text-zinc-200 whitespace-pre-wrap font-medium tracking-wide italic overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-amber-200 dark:scrollbar-thumb-zinc-700">
                   {typedText}
                   {typedText.length < birthdayData.loveLetter.length && (
                     <motion.span

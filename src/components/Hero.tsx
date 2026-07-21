@@ -19,7 +19,7 @@ export default function Hero({ onExplore }: HeroProps) {
   ];
 
   return (
-    <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#FFFDF9] via-[#FFF9F2] to-[#FFF0ED] dark:from-[#1E110B] dark:via-[#160B05] dark:to-[#0D0502]">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden py-12 md:py-20 bg-gradient-to-br from-[#FFFDF9] via-[#FFF9F2] to-[#FFF0ED] dark:from-[#1E110B] dark:via-[#160B05] dark:to-[#0D0502]">
       
       
       {/* Floating Background Particles (Stars) */}
@@ -68,9 +68,9 @@ export default function Hero({ onExplore }: HeroProps) {
             damping: 15,
             delay: 0.6,
           }}
-          className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/70 dark:bg-zinc-900/60 shadow-md border border-white/50 dark:border-zinc-800/40 flex items-center justify-center text-amber-500 mb-8"
+          className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/70 dark:bg-zinc-900/60 shadow-md border border-white/50 dark:border-zinc-800/40 flex items-center justify-center text-amber-500 mb-2 md:mb-3"
         >
-          <Sparkles className="w-8 h-8 md:w-10 md:h-10 fill-current animate-pulse" />
+          <Sparkles className="w-5 h-5 md:w-7 md:h-7 fill-current animate-pulse" />
         </motion.div>
 
         {/* Title */}
@@ -78,9 +78,9 @@ export default function Hero({ onExplore }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
-          className="font-serif text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-orange-600 to-amber-700 dark:from-amber-400 dark:via-orange-500 dark:to-yellow-500 drop-shadow-sm"
+          className="font-script text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap font-normal tracking-wide leading-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 dark:from-amber-300 dark:via-orange-300 dark:to-rose-400 drop-shadow-lg filter pb-2 px-2"
         >
-          Happy Birthday,<br />Divya! ✨
+          Happy Birthday, Divya ✨
         </motion.h1>
 
         {/* Subtitle */}
@@ -88,66 +88,36 @@ export default function Hero({ onExplore }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 0.8, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 1.1 }}
-          className="mt-6 font-sans text-lg md:text-xl lg:text-2xl font-light text-zinc-700 dark:text-zinc-300 max-w-xl mx-auto"
+          className="mt-1 md:mt-2 mb-8 md:mb-10 font-sans text-xs md:text-sm lg:text-base font-light text-zinc-700 dark:text-zinc-300 whitespace-nowrap px-4"
         >
-          A special surprise made just for you to celebrate your special day.
+          A special surprise for your special day
         </motion.p>
 
-        {/* Floral Video Card */}
+        {/* Happy Birthday Video */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 1.3 }}
-          className="mt-10 w-full max-w-3xl"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 1.3 }}
+          className="w-full max-w-3xl aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-2 md:border-4 border-amber-200/50 dark:border-zinc-800/50 bg-black group relative z-20"
         >
-          <div className="relative overflow-hidden rounded-[2rem] border border-rose-200/70 bg-gradient-to-br from-white/80 via-rose-50/80 to-amber-50/80 p-4 shadow-[0_25px_80px_-15px_rgba(244,114,182,0.35)] backdrop-blur-xl dark:border-rose-900/40 dark:from-zinc-900/80 dark:via-rose-950/50 dark:to-amber-950/40">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(244,114,182,0.2),_transparent_45%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.2),_transparent_45%)]" />
-            <div className="absolute -left-8 top-5 h-24 w-24 rounded-full border border-rose-300/50 dark:border-rose-700/40" />
-            <div className="absolute -right-6 bottom-6 h-24 w-24 rounded-full border border-amber-300/50 dark:border-amber-700/40" />
-            <div className="relative rounded-[1.5rem] border border-white/60 bg-white/70 p-3 shadow-inner dark:border-zinc-800/50 dark:bg-zinc-950/40">
-              <video
-                className="w-full aspect-video rounded-[1.25rem] object-cover ring-1 ring-rose-200/60 dark:ring-rose-900/40"
-                src="/videos/happy-birthday-divya.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls
-              />
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Glowing Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 1.4 }}
-          className="mt-12"
-        >
-          <motion.button
-            onClick={onExplore}
-            whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(245, 158, 11, 0.4)" }}
-            whileTap={{ scale: 0.98 }}
-            className="px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white font-sans text-md font-semibold tracking-wide shadow-lg shadow-amber-500/25 border border-amber-400/20 cursor-pointer flex items-center gap-2 group transition-all duration-300"
+          <video
+            className="w-full h-full object-contain"
+            controls
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/videos/happy-birthday-divya.mp4#t=0.1"
           >
-            <span>Open Your Surprise</span>
-            <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" />
-          </motion.button>
+            <source src="/videos/happy-birthday-divya.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5, y: [0, 8, 0] }}
-        transition={{ delay: 2, duration: 2, repeat: Infinity }}
-        className="absolute bottom-6 flex flex-col items-center gap-1 text-amber-600/60 font-sans text-xs uppercase tracking-widest cursor-pointer"
-        onClick={onExplore}
-      >
-        <span>Scroll to Begin</span>
-        <ChevronDown className="w-3.5 h-3.5" />
-      </motion.div>
+      {/* Connecting gradient line to next section */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-amber-500/60 via-amber-500/30 to-transparent" />
     </section>
   );
 }

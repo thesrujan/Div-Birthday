@@ -61,7 +61,7 @@ export default function Wishes() {
   return (
     <section 
       ref={containerRef}
-      className="relative py-24 px-4 bg-gradient-to-br from-[#FFF5F8] via-[#FFF0F2] to-[#F5E6EC] dark:from-[#180A1A] dark:via-[#130310] dark:to-[#160517] overflow-hidden flex flex-col items-center justify-center min-h-[500px]"
+      className="relative py-32 px-4 bg-gradient-to-br from-[#FFFAF8] via-[#FFF7F3] to-[#FFF5F0] dark:from-[#1A0A0F] dark:via-[#140408] dark:to-[#160510] overflow-hidden flex flex-col items-center justify-center min-h-[600px]"
     >
       <div className="max-w-2xl w-full flex flex-col items-center z-10 text-center">
         {/* Header */}
@@ -70,11 +70,14 @@ export default function Wishes() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-12"
         >
-          <span className="font-sans text-xs font-semibold uppercase tracking-widest text-rose-500 bg-rose-50 dark:bg-rose-950/30 px-3 py-1.5 rounded-full">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-pink-600 to-red-600 dark:from-rose-400 dark:via-pink-500 dark:to-red-500 drop-shadow-lg [text-shadow:0_0_30px_rgba(244,63,94,0.3)]">
             Birthday Wishes
-          </span>
+          </h2>
+          <p className="font-sans text-sm md:text-base font-light text-zinc-600 dark:text-zinc-400 mt-3">
+            A message from the heart
+          </p>
         </motion.div>
 
         {/* Wishes Card */}

@@ -93,6 +93,31 @@ export default function Hero({ onExplore }: HeroProps) {
           A special surprise made just for you to celebrate your special day.
         </motion.p>
 
+        {/* Floral Video Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 1.3 }}
+          className="mt-10 w-full max-w-3xl"
+        >
+          <div className="relative overflow-hidden rounded-[2rem] border border-rose-200/70 bg-gradient-to-br from-white/80 via-rose-50/80 to-amber-50/80 p-4 shadow-[0_25px_80px_-15px_rgba(244,114,182,0.35)] backdrop-blur-xl dark:border-rose-900/40 dark:from-zinc-900/80 dark:via-rose-950/50 dark:to-amber-950/40">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(244,114,182,0.2),_transparent_45%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.2),_transparent_45%)]" />
+            <div className="absolute -left-8 top-5 h-24 w-24 rounded-full border border-rose-300/50 dark:border-rose-700/40" />
+            <div className="absolute -right-6 bottom-6 h-24 w-24 rounded-full border border-amber-300/50 dark:border-amber-700/40" />
+            <div className="relative rounded-[1.5rem] border border-white/60 bg-white/70 p-3 shadow-inner dark:border-zinc-800/50 dark:bg-zinc-950/40">
+              <video
+                className="w-full aspect-video rounded-[1.25rem] object-cover ring-1 ring-rose-200/60 dark:ring-rose-900/40"
+                src="/videos/happy-birthday-divya.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+              />
+            </div>
+          </div>
+        </motion.div>
+
         {/* Glowing Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -44,6 +44,9 @@ export const birthdayData: BirthdayConfig = {
     "WhatsApp Audio 2026-07-18 at 4.39.07 PM.mpeg",
     "WhatsApp Audio 2026-07-18 at 4.40.21 PM.mpeg",
     "WhatsApp Audio 2026-07-18 at 4.42.22 PM.mpeg",
+    "WhatsApp Audio 2026-07-22 at 8.19.09 PM.mpeg",
+    "WhatsApp Audio 2026-07-22 at 8.19.32 PM.mpeg",
+    "WhatsApp Audio 2026-07-22 at 8.19.49 PM.mpeg",
   ],
   
   loveLetter: `Dearest Divya,
@@ -204,7 +207,7 @@ Happy Birthday once again, Divya. ❤️`,
       caption: "One of my absolute favorites. You look like a painting, like someone drew you after seeing the most beautiful thing in the world. 🎨"
     },
     {
-      url: "/pictures/NHSME3782.JPG",
+      url: "/videos/div.mp4",
       caption: "You first sent this for me to edit and you did not even like it. But it looked like AI-perfected art to me, I loved it more than you knew. 💙"
     },
     {
